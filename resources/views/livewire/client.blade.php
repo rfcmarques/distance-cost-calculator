@@ -12,7 +12,7 @@
                         <input type="number" class="form-control" id="distance" wire:model="distance">
                     </div>
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">Criar cliente</button>
+                        <button type="submit" class="btn btn-outline-primary">Criar cliente</button>
                     </div>
                 </div>
             </form>
