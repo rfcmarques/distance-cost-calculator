@@ -8,6 +8,7 @@ use Livewire\Component;
 class Client extends Component
 {
     public string $name = '';
+    public string $location = '';
     public int $distance = 0;
     public $clients;
 
@@ -24,7 +25,7 @@ class Client extends Component
     public function save()
     {
         ModelsClient::create(
-            $this->only(['name', 'distance'])
+            $this->only(['name', 'location', 'distance'])
         );
 
         return $this->redirect('/clients');

@@ -4,11 +4,15 @@
             <form wire:submit="save">
                 <div class="row">
                     <div class="col-12 mb-3">
-                        <label for="nome" class="form-label">Nome</label>
+                        <label for="name" class="form-label">Nome</label>
                         <input type="text" class="form-control" id="name" wire:model="name">
                     </div>
                     <div class="col-12 mb-3">
-                        <label for="distance" class="form-label">Distância</label>
+                        <label for="location" class="form-label">Localidade</label>
+                        <input type="text" class="form-control" id="location" wire:model="location">
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label for="distance" class="form-label">Distância (kms)</label>
                         <input type="number" class="form-control" id="distance" wire:model="distance">
                     </div>
                     <div class="d-grid">
@@ -27,6 +31,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">Nome</th>
+                                <th scope="col">Localidade</th>
                                 <th scope="col">Distância</th>
                             </tr>
                         </thead>
@@ -34,6 +39,7 @@
                             @foreach ($clients as $client)
                                 <tr>
                                     <td>{{ $client->name }}</td>
+                                    <td>{{ $client->location }}</td>
                                     <td>{{ $client->distance }}</td>
                                 </tr>
                             @endforeach
